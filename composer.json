@@ -1,0 +1,30 @@
+{
+  "name": "miserenkov/yii2-timezone-picker",
+  "description": "Yii2 timezone picker",
+  "keywords": ["yii2", "timezone", "picker", "input", "validator"],
+  "type": "yii2-extension",
+  "license": "MIT",
+  "support": {
+    "email": "mi.serenkov@gmail.com",
+    "issues": "https://github.com/miserenkov/yii2-timezone-picker/issues",
+    "source": "https://github.com/miserenkov/yii2-timezone-picker"
+  },
+  "authors": [
+    {
+      "name": "Misha Serenkov",
+      "email": "mi.serenkov@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": "~2",
+    "kartik-v/yii2-widget-select2": "~2.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^2.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "miserenkov\\": "src"
+    }
+  }
+}
