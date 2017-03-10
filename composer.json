@@ -24,7 +24,8 @@
   },
   "autoload": {
     "psr-4": {
-      "miserenkov\\": "src"
+      "miserenkov\\widgets\\": "src",
+      "miserenkov\\validators\\": "src"
     }
   }
 }
