@@ -19,13 +19,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist miserenkov/yii2-timezone-picker "^0.2"
+php composer.phar require --prefer-dist miserenkov/yii2-timezone-picker "^0.3"
 ```
 
 or add
 
 ```
-"miserenkov/yii2-timezone-picker": "^0.2"
+"miserenkov/yii2-timezone-picker": "^0.3"
 ```
 
 to the require section of your `composer.json` file.
