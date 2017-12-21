@@ -30,6 +30,18 @@ class TimeZoneValidator extends Validator
     }
 
     /**
+     * @inheritdoc
+     */
+    protected function validateValue($value)
+    {
+        if (!in_array($value, self::getTimeZoneList())) {
+            return ['Invalid time zone', []];
+        }
+
+        return null;
+    }
+
+    /**
      * @return array
      */
     protected static function getTimeZoneList()
