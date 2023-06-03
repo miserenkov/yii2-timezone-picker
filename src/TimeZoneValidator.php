@@ -9,14 +9,12 @@
 namespace miserenkov\validators;
 
 
+use miserenkov\widgets\InteractsWithTimezonesList;
 use yii\validators\Validator;
 
 class TimeZoneValidator extends Validator
 {
-    /**
-     * @var array
-     */
-    private static $_timeZoneList = null;
+    use InteractsWithTimezonesList;
 
     /**
      * @param \yii\base\Model $model
@@ -39,17 +37,5 @@ class TimeZoneValidator extends Validator
         }
 
         return null;
-    }
-
-    /**
-     * @return array
-     */
-    protected static function getTimeZoneList()
-    {
-        if (self::$_timeZoneList === null) {
-            self::$_timeZoneList = \DateTimeZone::listIdentifiers(\DateTimeZone::ALL);
-        }
-
-        return self::$_timeZoneList;
     }
 }

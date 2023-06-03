@@ -15,6 +15,8 @@ use yii\widgets\InputWidget;
 
 class TimeZonePicker extends InputWidget
 {
+    use InteractsWithTimezonesList;
+
     public $pluginOptions = [];
 
     public $groupTimezones = true;
@@ -28,7 +30,7 @@ class TimeZonePicker extends InputWidget
         $groupTimezones = $this->groupTimezones;
         $now = new \DateTime('now', new \DateTimeZone('UTC'));
 
-        foreach (\DateTimeZone::listIdentifiers(\DateTimeZone::ALL) as $timeZone) {
+        foreach (static::getTimeZoneList() as $timeZone) {
             $now->setTimezone(new \DateTimeZone($timeZone));
             $timeZoneExp = explode('/', $timeZone == 'UTC' ? 'UTC/UTC' : $timeZone);
 
